@@ -91,7 +91,7 @@ Pagination reads current data, without snapshot guarantees. Records may change d
 | `slug` | URL slug |
 | `url` | Canonical Archive page |
 | `type` | Singular content type |
-| `title` | Decoded plain title |
+| `title` | Decoded title; render as text |
 | `date_modified` | UTC modification date, `YYYY-MM-DD` |
 | `content` | Plain text extracted from static core blocks; dynamic blocks omitted |
 | `meta` | Object of exportable registered `yya_*` fields; empty fields omitted |
@@ -135,3 +135,5 @@ wp eval-file wp-content/plugins/yoyoarchive-cpts/tests/public-api-selftest.php
 ```
 
 The integration test creates temporary fixture records and terms, then removes its own fixtures. Do not use a production database for routine testing.
+
+Validated 2026-10-29: 46 integration checks passed using isolated WordPress 7.0.2, PHP 8.2.29, and MySQL 8.4. Checks include anonymous access, administrator visibility restrictions, pagination, parameter validation, filters, protected relationships/media, rejected writes, and immediate unpublish behavior. Production deployment remains pending.
