@@ -123,17 +123,3 @@ No API-specific request quota is currently implemented. Keep requests sequential
 Archive's existing dataset declares **[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)**. Attribute The YoYo Archive, link the source and license, indicate changes, and follow share-alike requirements where applicable. Example: “Data from [The YoYo Archive](https://yoyoarchive.org), CC BY-SA 4.0; modified.”
 
 Image and PDF links do not grant reuse rights. Third-party photographs, scans, logos, and linked assets may have separate rights; verify permissions with their owners. This documentation does not change existing content licenses.
-
-## Implementation and verification
-
-Implementation: `wp-content/plugins/yoyoarchive-cpts/app/api/public.php`. Shared dataset serializer: `app/cli/DatasetExporter.php`.
-
-Run on a disposable WordPress installation with the Archive plugin active:
-
-```sh
-wp eval-file wp-content/plugins/yoyoarchive-cpts/tests/public-api-selftest.php
-```
-
-The integration test creates temporary fixture records and terms, then removes its own fixtures. Do not use a production database for routine testing.
-
-Validated 2026-10-29: 46 integration checks passed using isolated WordPress 7.0.2, PHP 8.2.29, and MySQL 8.4. Checks include anonymous access, administrator visibility restrictions, pagination, parameter validation, filters, protected relationships/media, rejected writes, and immediate unpublish behavior. Production deployment remains pending.
