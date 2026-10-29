@@ -2,7 +2,7 @@
 
 Read public Archive data as JSON. No API key required. This repository contains API documentation; server implementation lives in [The YoYo Archive](https://github.com/rkalajian/The-Yoyo-Archive).
 
-**Status:** v1 implementation prepared; production availability requires deployment. Examples below use the intended production URL.
+**Status:** v1 is live. Start with the Archive's [API usage guide](https://yoyoarchive.org/api/), or use the endpoint reference below.
 
 Base URL: `https://yoyoarchive.org/wp-json/yoyo-archive/v1/public`
 
